@@ -4,13 +4,9 @@ import { getFile } from "./getFile";
 const App = require("@octokit/app");
 const Octokit = require("@octokit/rest");
 
-require("dotenv-safe").config({ allowEmptyValues: true });
-
 const GITHUB_PEM = process.env.PEM;
 const ISSUER_ID = process.env.ISSUER_ID;
 const INSTALL_ID = process.env.INSTALL_ID;
-
-console.log("ISSUER_ID ", ISSUER_ID);
 
 const getKey = async () => {
   const file = path.resolve(__dirname, `../../${GITHUB_PEM}`);
