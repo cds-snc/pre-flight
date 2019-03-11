@@ -8,6 +8,9 @@ require("dotenv-safe").config({ allowEmptyValues: true });
 
 const GITHUB_PEM = process.env.PEM;
 const ISSUER_ID = process.env.ISSUER_ID;
+const INSTALL_ID = process.env.INSTALL_ID;
+
+console.log("ISSUER_ID ", ISSUER_ID);
 
 const getKey = async () => {
   const file = path.resolve(__dirname, `../../${GITHUB_PEM}`);
@@ -15,7 +18,7 @@ const getKey = async () => {
   return result;
 };
 
-export const authenticate = async installationId => {
+export const authenticate = async (installationId = INSTALL_ID) => {
   const app = new App({
     id: ISSUER_ID,
     privateKey: await getKey()

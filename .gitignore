@@ -69,3 +69,5 @@ docker.txt
 *.swp
 
 .gcloud.json
+
+notes.md

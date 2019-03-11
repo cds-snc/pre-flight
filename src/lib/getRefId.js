@@ -9,7 +9,7 @@ export const getRefId = event => {
 
   let fullName = event.repository.full_name;
 
-  if (event && event.action) {
+  if (event && event.action && event.pull_request) {
     refId = event.pull_request.head.ref;
   } else if (event && event.ref) {
     if (!isMaster(event)) {

@@ -2,19 +2,13 @@ import express from "express";
 import { Logger, StackDriverNode } from "@cdssnc/logdriver";
 import { isMaster } from "../lib/isMaster";
 import { getRefId } from "../lib/getRefId";
-import { createRepo } from "../events/createRepo";
+import { onCreateRepo } from "../events/createRepo";
 
 Logger.subscribe("error", StackDriverNode.log);
-
-// Logger.debug("=> The message from the server...");
 
 const router = express.Router();
 
 router.get("/favicon.ico", (req, res) => res.status(204));
-
-router.get("/", async (req, res) => {
-  res.send("hello get request");
-});
 
 router.post("/", async (req, res) => {
   const body = req.body;
@@ -36,13 +30,13 @@ router.post("/", async (req, res) => {
   const refId = getRefId(body);
 
   if (!refId) {
-    res.send("no refId found");
-    return false;
+    console.log("no refId found");
   }
 
   switch (action) {
     case "created":
-      await createRepo(req, refId);
+      await onCreateRepo(body);
+      status = "on repo created";
       break;
     default:
       status = "no route found";
