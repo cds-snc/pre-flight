@@ -1,8 +1,8 @@
-import { isMaster } from "../lib/isMaster";
-import { getRefId } from "../lib/getRefId";
-import { onCreateRepo } from "../events/createRepo";
+import { isMaster } from "./lib/isMaster";
+import { getRefId } from "./lib/getRefId";
+import { onCreateRepo } from "./events/createRepo";
 
-export const handler = async req => {
+export const handle = async req => {
   const body = req.body;
   let status;
   let action;

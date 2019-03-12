@@ -1,8 +1,8 @@
-service: pre-flight #NOTE: Don't put the word "google" in here
+service: pre-flight-endpoint #NOTE: Don't put the word "google" in here
 
 provider:
   name: google
-  runtime: nodejs
+  runtime: nodejs8
   project: pre-flight-234215
   # the path to the credentials file needs to be absolute
   credentials: ./keyfile.json
@@ -19,8 +19,8 @@ package:
     - .git/**
 
 functions:
-  first:
-    handler: handleEvent
+  github:
+    handler: http
     events:
       - http: path
   # NOTE: the following uses an "event" event (pubSub event in this case).
