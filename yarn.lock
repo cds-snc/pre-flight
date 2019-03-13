@@ -4936,6 +4936,11 @@ node-releases@^1.1.8:
   dependencies:
     semver "^5.3.0"
 
+nodejs-base64@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/nodejs-base64/-/nodejs-base64-1.0.3.tgz#bcdee50edd0225f3c2fa3ffa1edb9b4f176834ad"
+  integrity sha512-6wLDv7N/MfV4wDsrBC2s8xVfx82iywopGLdAVYYTLmwOHTm6N463Dwr9tP4+GHhfTMPN4h9i2Z0LzMdFB2G5cw==
+
 normalize-package-data@^2.3.2:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.5.0.tgz#e66db1838b200c1dfc233225d12cb36520e234a8"
