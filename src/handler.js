@@ -1,11 +1,15 @@
 import { isMaster } from "./lib/isMaster";
 import { getRefId } from "./lib/getRefId";
 import { onCreateRepo } from "./events/createRepo";
+import { checkFiles } from "./lib/checkFiles";
 
 export const handle = async req => {
   const body = req.body;
   let status;
   let action;
+
+  status = await checkFiles();
+  return status;
 
   if (body.action) {
     // create
