@@ -1,4 +1,3 @@
-import { isMaster } from "./lib/isMaster";
 import { getRefId } from "./lib/getRefId";
 import { onCreateRepo } from "./events/createRepo";
 
@@ -8,15 +7,7 @@ export const handle = async req => {
   let action;
 
   if (body.action) {
-    // create
-    // close
-    // reopen
     action = body.action;
-  } else {
-    // get action from other type of event
-    if (!isMaster() && body.repository) {
-      action = "updated";
-    }
   }
 
   const refId = getRefId(body);
