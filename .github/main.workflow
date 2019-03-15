@@ -5,5 +5,5 @@ workflow "Pre-flight checks" {
 
 action "docker://alpine:3.9.2" {
   uses = "docker://alpine:3.9.2"
-  args = "[ -f /github/workspace/LICENSE.md ] && exit 0 || exit 1"
+  args = "if [ -e /github/workspace/LICENSE.md ]; then exit 0; else exit 1; fi"
 }
