@@ -28,6 +28,7 @@
     "@octokit/rest": "^16.18.1",
     "dotenv-safe": "^6.1.0",
     "esm": "^3.2.17",
+    "list-files-in-dir": "^0.1.5",
     "node-fetch": "^2.3.0",
     "nodejs-base64": "^1.0.3",
     "serverless": "^1.39.0",

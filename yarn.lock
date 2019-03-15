@@ -931,6 +931,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
   integrity sha512-wa09itaLE8L705aXd8F80jnFpxz3Y1/KRHfKsYL2bPc0XF+wEWu8sR9n5bmeu8Ba1N9z2GRNzm/YdHcghLkLKg==
 
+"@types/node@^10.0.0":
+  version "10.14.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.1.tgz#8701cd760acc20beba5ffe0b7a1b879f39cb8c41"
+  integrity sha512-Rymt08vh1GaW4vYB6QP61/5m/CFLGnFZP++bJpWbiNxceNa6RBipDmb413jvtSf/R1gg5a/jQVl2jY4XVRscEA==
+
 "@types/request@^2.47.0":
   version "2.48.1"
   resolved "https://registry.yarnpkg.com/@types/request/-/request-2.48.1.tgz#e402d691aa6670fbbff1957b15f1270230ab42fa"
@@ -4494,6 +4499,13 @@ lint-staged@^8.1.5:
     string-argv "^0.0.2"
     stringify-object "^3.2.2"
     yup "^0.26.10"
+
+list-files-in-dir@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/list-files-in-dir/-/list-files-in-dir-0.1.5.tgz#58d0352af8164763458cc678778b19fabf5d742b"
+  integrity sha512-DRSxn9ckPWIDnEvw5TJZGnqq2WjP+FTwdcFolRV6dTr0d2k6C0r++QnUJg+FBtLoQhzlCs+IqfXYf+HlbFtIBA==
+  dependencies:
+    "@types/node" "^10.0.0"
 
 listr-silent-renderer@^1.1.1:
   version "1.1.1"
