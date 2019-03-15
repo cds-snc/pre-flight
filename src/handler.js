@@ -8,8 +8,8 @@ export const handle = async req => {
   let status;
   let action;
 
-  status = await checkFiles();
-  return status;
+  //status = await checkFiles();
+  //return status;
 
   if (body.action) {
     // create
