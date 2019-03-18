@@ -12,10 +12,10 @@ export const onCreateRepo = async body => {
     const branchName = await createBranch(body, sha);
 
     console.log("Adding files ...");
-    await createFile(body, branchName);
+    result = await createFile(body, branchName);
 
     console.log("Creating PR ...");
-    await createPr(body, branchName);
+    result = await createPr(body, branchName);
   } catch (e) {
     console.log(e.message);
   }

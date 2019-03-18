@@ -9,6 +9,7 @@ export const createBranch = async (
   const repoName = body.repository.name;
   const ref = `refs/heads/${name}`;
   const client = await authenticate();
+
   await client.git.createRef({
     owner: repoOwner,
     repo: repoName,
