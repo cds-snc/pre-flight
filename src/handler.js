@@ -1,15 +1,9 @@
 import { onCreateRepo } from "./events/createRepo";
 
-// const nock = require('nock');
-// nock.recorder.rec();
-
 export const handle = async req => {
   const body = req.body;
   let status;
   let action;
-
-  // status = await checkFiles();
-  // return status;
 
   if (body.action) {
     action = body.action;

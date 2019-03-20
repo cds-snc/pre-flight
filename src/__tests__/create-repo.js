@@ -1,6 +1,8 @@
 import { eventJS } from "../__mocks__";
 import { onCreateRepo } from "../events/createRepo";
 
+const numFiles = 4;
+
 const mockGetRef = jest.fn(() => {
   return {
     data: {
@@ -39,8 +41,6 @@ auth.authenticate = jest
       pulls: { create: mockCreatePull }
     };
   });
-
-const numFiles = 2;
 
 test("handles create repo event", async () => {
   const event = await eventJS("create-repo");

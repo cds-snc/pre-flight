@@ -4,6 +4,5 @@ const handle = require("./handler").handle;
 
 exports.http = async (request, response) => {
   const result = await handle(request);
-  // const result = "works!";
   response.status(200).send(`Hello World! ${result}`);
 };
