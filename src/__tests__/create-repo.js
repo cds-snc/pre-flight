@@ -1,7 +1,7 @@
 import { eventJS } from "../__mocks__";
 import { onCreateRepo } from "../events/createRepo";
 
-const numFiles = 4;
+const numFiles = 6;
 
 const mockGetRef = jest.fn(() => {
   return {
