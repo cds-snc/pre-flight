@@ -11,6 +11,7 @@ export const handle = async req => {
 
   switch (action) {
     case "created":
+      await new Promise(resolve => setTimeout(resolve, 5000));
       await onCreateRepo(body);
       status = "on repo created";
       break;
