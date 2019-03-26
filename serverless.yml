@@ -6,6 +6,7 @@ provider:
   project: pre-flight-234215
   # the path to the credentials file needs to be absolute
   credentials: ./keyfile.json
+  memorySize: 1024
 
 plugins:
   - serverless-google-cloudfunctions
