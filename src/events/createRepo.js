@@ -8,7 +8,7 @@ export const onCreateRepo = async body => {
   try {
     const sha = await getSha(body);
 
-    console.log("Creating branch ...");
+    console.log("Creating branch for sha", sha);
     const branchName = await createBranch(body, sha);
 
     console.log("Adding files ...");
