@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@cdssnc/logdriver": "^0.0.2",
-    "@octokit/app": "^2.2.2",
+    "@octokit/app": "^4.2.0",
     "@octokit/rest": "^16.22.0",
     "dotenv-safe": "^6.1.0",
     "esm": "^3.2.22",
