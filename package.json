@@ -29,9 +29,9 @@
     "dotenv-safe": "^6.1.0",
     "esm": "^3.2.22",
     "list-files-in-dir": "^0.1.5",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "nodejs-base64": "^1.0.3",
-    "serverless": "^1.40.0",
+    "serverless": "^1.70.0",
     "serverless-google-cloudfunctions": "^2.3.2"
   },
   "devDependencies": {
